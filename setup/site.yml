@@ -1,0 +1,15 @@
+---
+- hosts: wp-ftw
+  gather_facts: false
+  vars_files:
+    - vars/private.yml
+    - vars/all.yml
+  tasks:
+    # connection test
+    # - name: ls
+    #   shell: ls
+    #   register: stdio
+    #   changed_when: no
+    # - name: show
+    #   debug:
+    #     msg: "{{ stdio }}"

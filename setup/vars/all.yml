@@ -1,0 +1,2 @@
+---
+ansible_ssh_common_args: '-o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa'
