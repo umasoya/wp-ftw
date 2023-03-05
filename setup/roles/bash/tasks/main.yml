@@ -1,0 +1,6 @@
+---
+
+- name: deploy .bash_profile
+  ansible.builtin.copy:
+    src: ../files/.bash_profile
+    dest: ~/

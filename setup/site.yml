@@ -13,3 +13,19 @@
     # - name: show
     #   debug:
     #     msg: "{{ stdio }}"
+
+    - name: deploy .bash_profile
+      tags:
+       - never
+       - init
+       - bash
+      ansible.builtin.include_tasks:
+        roles/bash/tasks/main.yml
+
+    - name: deploy .zshrc
+      tags:
+       - never
+       - init
+       - zsh
+      ansible.builtin.import_tasks:
+        roles/zsh/tasks/main.yml
