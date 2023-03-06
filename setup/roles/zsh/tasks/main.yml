@@ -1,21 +1,5 @@
 ---
 
-# - name: '[zsh] create ~/.zsh directory'
-#   file:
-#     path: ~/.zsh
-#     state: directory
-#     owner: "{{ ftw_user }}"
-#     group: "LolipopUser"
-#     mode: "775"
-#
-# - name: '[zsh] upload pure prompt'
-#   unarchive:
-#     src: ../files/pure_v1.21.0.tar.gz
-#     dest: ~/.zsh
-#
-# - name: "[zsh] chenge pure directory name"
-#   shell: "mv ~/.zsh/pure-1.21.0 ~/.zsh/pure"
-
 - name: '[zsh] deploy .zshrc'
   ansible.builtin.copy:
     src: ../files/.zshrc

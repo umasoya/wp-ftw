@@ -1,13 +1,3 @@
-### prompt
-fpath+=($HOME/.zsh/pure)
-zstyle :prompt:pure:git:branch color magenta
-zstyle :prompt:pure:git:branch:cached color yellow
-zstyle :prompt:pure:git:dirty color 091
-zstyle :prompt:pure:user color blue
-zstyle :prompt:pure:host color blue
-autoload -U promptinit; promptinit
-prompt pure
-
 ### options
 setopt auto_cd
 setopt no_beep
