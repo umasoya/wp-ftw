@@ -1,0 +1,14 @@
+---
+
+- name: "create ~/bin directory"
+  file:
+    path: "~/bin"
+    state: directory
+    owner: "{{ ftw_user }}"
+    group: "LolipopUser"
+    mode: "775"
+
+- name: "upload gdrive binary"
+  ansible.builtin.unarchive:
+   src: ../files/gdrive_2.1.1_linux_386.tar.gz
+   dest: "~/bin"

@@ -1,0 +1,17 @@
+---
+
+- name: "create ~/bin"
+  file:
+    path: "~/bin"
+    state: directory
+    owner: "{{ ftw_user }}"
+    group: "LolipopUser"
+    mode: "775"
+
+- name: "upload gcloud binary"
+  ansible.builtin.unarchive:
+   src: ../files/google-cloud-cli-419.0.0-linux-x86_64.tar.gz
+   dest: "~/bin"
+
+- name: "install gcloud command"
+  script: "~/bin/google-cloud-sdk/install.sh"

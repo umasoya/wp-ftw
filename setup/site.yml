@@ -5,15 +5,6 @@
     - vars/private.yml
     - vars/all.yml
   tasks:
-    # connection test
-    # - name: ls
-    #   shell: ls
-    #   register: stdio
-    #   changed_when: no
-    # - name: show
-    #   debug:
-    #     msg: "{{ stdio }}"
-
     - name: deploy .bash_profile
       tags:
        - never
@@ -29,3 +20,19 @@
        - zsh
       ansible.builtin.import_tasks:
         roles/zsh/tasks/main.yml
+
+    - name: "install gcloud command"
+      tags:
+        - never
+        - init
+        - gcloud
+      ansible.builtin.import_tasks:
+        roles/gcloud/tasks/main.yml
+
+    - name: "install gdrive command"
+      tags:
+        - never
+        - init
+        - gdrive
+      ansible.builtin.import_tasks:
+        roles/gdrive/tasks/main.yml

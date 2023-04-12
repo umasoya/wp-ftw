@@ -13,3 +13,6 @@ setopt interactive_comments
 ### alias
 alias la='ls -a'
 alias ll='ls -l'
+
+# complements
+source ~/bin/path.zsh.inc
